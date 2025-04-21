@@ -1,0 +1,1 @@
+// Representa un resultado de emparejamiento para la API.

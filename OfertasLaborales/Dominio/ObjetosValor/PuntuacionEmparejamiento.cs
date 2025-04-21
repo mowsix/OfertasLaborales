@@ -1,0 +1,1 @@
+// Representa el score y desglose del emparejamiento.

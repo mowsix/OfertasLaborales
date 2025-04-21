@@ -1,0 +1,1 @@
+// Gestiona el estado (Pendiente, Enviada, Fallida) de un intento de notificación sobre un Emparejamiento.

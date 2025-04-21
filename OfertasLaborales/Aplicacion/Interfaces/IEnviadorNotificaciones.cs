@@ -1,0 +1,1 @@
+// Contrato para el servicio de infraestructura que envía notificaciones (email, SMS, etc.).

@@ -1,0 +1,1 @@
+// Implementa el cálculo de compatibilidad (score).

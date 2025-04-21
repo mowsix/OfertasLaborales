@@ -1,0 +1,1 @@
+// (Opcional) Encapsula datos de vacante necesarios para emparejar.

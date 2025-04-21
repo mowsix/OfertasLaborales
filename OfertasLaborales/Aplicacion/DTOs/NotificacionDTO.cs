@@ -1,0 +1,1 @@
+// Representa el estado o detalle de una notificación.

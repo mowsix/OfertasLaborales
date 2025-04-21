@@ -1,0 +1,1 @@
+ // Representa el resultado (score, estado) del cruce entre un IdVacante y un IdCandidato.

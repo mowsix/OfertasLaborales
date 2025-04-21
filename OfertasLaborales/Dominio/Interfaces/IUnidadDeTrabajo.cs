@@ -1,0 +1,1 @@
+// Contrato para la Unidad de Trabajo (opera sobre repositorios propios).

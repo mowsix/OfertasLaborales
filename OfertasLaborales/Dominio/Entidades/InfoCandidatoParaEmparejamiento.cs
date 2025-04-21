@@ -1,0 +1,1 @@
+// (Opcional) Encapsula datos de candidato necesarios para emparejar.

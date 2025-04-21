@@ -1,0 +1,1 @@
+// Mapeos Fluent API para las entidades propias en EF Core.

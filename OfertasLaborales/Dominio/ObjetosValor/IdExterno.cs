@@ -1,0 +1,1 @@
+// Representa un ID de una entidad en el sistema externo.

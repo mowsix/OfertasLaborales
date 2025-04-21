@@ -1,0 +1,1 @@
+// Gestiona la sesión con la BD propia (almacena Emparejamiento, NotificacionEmparejamiento).

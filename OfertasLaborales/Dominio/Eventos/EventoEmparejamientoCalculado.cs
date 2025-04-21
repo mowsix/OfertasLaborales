@@ -1,0 +1,1 @@
+// Se generó un nuevo resultado de emparejamiento.

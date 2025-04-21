@@ -1,0 +1,1 @@
+// Interfaz si hay un servicio de app para orquestar la carga inicial de datos externos.

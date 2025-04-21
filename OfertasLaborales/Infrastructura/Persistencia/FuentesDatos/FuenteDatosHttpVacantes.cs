@@ -1,0 +1,1 @@
+// Implementa IFuenteDatosExternaVacantes (ej. consume API REST).

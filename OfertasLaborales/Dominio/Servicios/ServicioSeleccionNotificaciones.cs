@@ -1,0 +1,1 @@
+// Implementa las reglas para elegir qué emparejamientos notificar.

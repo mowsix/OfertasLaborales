@@ -1,0 +1,1 @@
+// Contrato para obtener datos de Vacantes externas.

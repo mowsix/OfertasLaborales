@@ -1,0 +1,1 @@
+// Contrato para la lógica que decide qué emparejamientos notificar.

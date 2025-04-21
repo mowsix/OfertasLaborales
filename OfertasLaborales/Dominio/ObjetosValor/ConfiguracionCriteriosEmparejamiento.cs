@@ -1,0 +1,1 @@
+// (Opcional) Encapsula la configuración del algoritmo (pesos, umbrales).

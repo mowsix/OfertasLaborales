@@ -1,0 +1,1 @@
+// Procesa la consulta obteniendo datos del repositorio.

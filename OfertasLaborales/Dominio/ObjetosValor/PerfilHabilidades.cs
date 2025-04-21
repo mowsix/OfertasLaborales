@@ -1,0 +1,1 @@
+// Contiene las habilidades leídas de datos externos.

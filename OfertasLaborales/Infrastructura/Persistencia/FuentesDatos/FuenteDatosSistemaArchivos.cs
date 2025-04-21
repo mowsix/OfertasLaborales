@@ -1,0 +1,1 @@
+// (Alternativa) Implementa lectura desde archivos.

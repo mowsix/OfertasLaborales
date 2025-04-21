@@ -1,0 +1,1 @@
+// Info necesaria para notificar (leída de datos externos).

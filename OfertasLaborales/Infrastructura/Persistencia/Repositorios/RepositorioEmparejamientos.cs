@@ -1,0 +1,1 @@
+// Implementa IRepositorioEmparejamientos (guarda/lee en BD propia).

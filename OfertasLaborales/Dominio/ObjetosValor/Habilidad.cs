@@ -1,0 +1,1 @@
+ // Representa una habilidad individual.

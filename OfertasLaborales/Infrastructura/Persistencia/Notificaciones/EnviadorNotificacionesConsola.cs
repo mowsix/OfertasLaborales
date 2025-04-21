@@ -1,0 +1,1 @@
+// Implementa IEnviadorNotificaciones escribiendo en consola.

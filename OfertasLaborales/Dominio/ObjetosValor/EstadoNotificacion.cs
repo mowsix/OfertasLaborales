@@ -1,0 +1,1 @@
+// Enum o VO para el estado de NotificacionEmparejamiento.
