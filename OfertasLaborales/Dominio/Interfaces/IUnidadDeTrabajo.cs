@@ -1,1 +1,6 @@
-// Contrato para la Unidad de Trabajo (opera sobre repositorios propios).
+namespace Dominio.Interfaces;
+
+public interface IUnidadDeTrabajo
+{
+    Task<int> GuardarCambiosAsync(CancellationToken cancellationToken = default);
+}

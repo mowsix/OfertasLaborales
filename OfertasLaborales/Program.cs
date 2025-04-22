@@ -1,57 +1,47 @@
-// --- PASO 1: Añadir Usings Necesarios ---
-// Asegúrate de que los namespaces coincidan con los de tus proyectos
-using Aplicacion.Consultas; // Para MediatR (usando una clase de ejemplo como ConsultaContarDatosExternos)
+using Aplicacion.Consultas;
 using Dominio.Interfaces;
+using Dominio.Servicios;
 using Infraestructura.FuentesDatos;
-using MediatR; // Necesario para AddMediatR
+using Infraestructura.Persistencia.ContextoDB;
+using Infraestructura.Persistencia.Repositorios;
+using Infraestructura.Persistencia.UnidadDeTrabajo;
+using MediatR;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// --- PASO 2: Añadir Servicios al Contenedor (Dependency Injection) ---
-
-// 1. HttpClientFactory (Necesario para nuestras Fuentes de Datos)
+// Servicios base
 builder.Services.AddHttpClient();
-
-// 2. MediatR (Para el patrón CQRS/Mediator)
-// Reemplaza 'ConsultaContarDatosExternos' con cualquier clase que esté en tu proyecto 'Aplicacion'
-// o crea una clase pública vacía 'AssemblyReference' en Aplicacion y usa typeof(Aplicacion.AssemblyReference)
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblyContaining<ConsultaContarDatosExternos>());
+builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
-// 3. Registra tus implementaciones de fuentes de datos (Infraestructura)
-// Usamos AddScoped porque HttpClientFactory es seguro para usar en Scoped/Transient y así
-// compartimos la misma instancia dentro de una misma petición HTTP si fuera necesario.
+// Registrar fuentes de datos
 builder.Services.AddScoped<IFuenteDatosExternaVacantes, FuenteDatosMockarooVacantes>();
 builder.Services.AddScoped<IFuenteDatosExternaCandidatos, FuenteDatosMockarooCandidatos>();
 
-// 4. Servicios para API Controllers (En lugar de AddOpenApi/MapOpenApi para Minimal API)
-builder.Services.AddControllers(); // Habilita el uso de Controllers
-builder.Services.AddEndpointsApiExplorer(); // Necesario para que Swagger descubra los endpoints de los controllers
-builder.Services.AddSwaggerGen(); // Genera la documentación Swagger
+// Registrar servicios de dominio
+builder.Services.AddScoped<IServicioEmparejamiento, ServicioEmparejamiento>();
 
-// --- PASO 3: Construir la Aplicación ---
+// Configurar base de datos
+builder.Services.AddDbContext<ContextoBdEmparejamiento>(options =>
+    options.UseInMemoryDatabase("EmparejamientosDb")); // Para desarrollo inicial, luego cambiar a SQL Server
+
+// Registrar repositorios y unidad de trabajo
+builder.Services.AddScoped<IRepositorioEmparejamientos, RepositorioEmparejamientos>();
+builder.Services.AddScoped<IUnidadDeTrabajo, UnidadDeTrabajo>();
+
 var app = builder.Build();
 
-// --- PASO 4: Configurar el Pipeline de Peticiones HTTP ---
-
-// Habilitar Swagger solo en Desarrollo
+// Configure el pipeline HTTP
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger(); // Genera el archivo swagger.json
-    app.UseSwaggerUI(); // Muestra la UI interactiva de Swagger
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
 
-// Middlewares estándar
 app.UseHttpsRedirection();
-
-// app.UseAuthorization(); // Descomenta si necesitas autorización más adelante
-
-// Mapear las peticiones a los Controllers que definiste en API > Controladores
 app.MapControllers();
 
-// --- PASO 5: Ejecutar la Aplicación ---
 app.Run();
-
-// --- PASO 6: Eliminar Código de Ejemplo Minimal API (Opcional pero Recomendado) ---
-// Ya no necesitamos el endpoint /weatherforecast ni el record WeatherForecast
-// El código relacionado con 'summaries', 'app.MapGet("/weatherforecast", ...)' y 'record WeatherForecast'
-// puede ser eliminado de este archivo para mayor claridad.
