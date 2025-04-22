@@ -167,3 +167,7 @@
 /Users/alejandrogallegohenao/Desktop/OfertasLaboralesParcial3/OfertasLaborales/obj/Debug/net9.0/OfertasLaborales.pdb
 /Users/alejandrogallegohenao/Desktop/OfertasLaboralesParcial3/OfertasLaborales/obj/Debug/net9.0/OfertasLaborales.genruntimeconfig.cache
 /Users/alejandrogallegohenao/Desktop/OfertasLaboralesParcial3/OfertasLaborales/obj/Debug/net9.0/ref/OfertasLaborales.dll
+/Users/alejandrogallegohenao/Desktop/OfertasLaboralesParcial3/OfertasLaborales/bin/Debug/net9.0/Swashbuckle.AspNetCore.Swagger.dll
+/Users/alejandrogallegohenao/Desktop/OfertasLaboralesParcial3/OfertasLaborales/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Users/alejandrogallegohenao/Desktop/OfertasLaboralesParcial3/OfertasLaborales/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/Users/alejandrogallegohenao/Desktop/OfertasLaboralesParcial3/OfertasLaborales/obj/Debug/net9.0/OfertasLaborales.sourcelink.json
