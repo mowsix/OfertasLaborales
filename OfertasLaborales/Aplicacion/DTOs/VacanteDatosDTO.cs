@@ -1,1 +1,0 @@
-// DTO con datos relevantes de la vacante para mostrar.

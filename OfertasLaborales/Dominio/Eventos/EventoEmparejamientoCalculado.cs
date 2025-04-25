@@ -1,1 +1,6 @@
-// Se generó un nuevo resultado de emparejamiento.
+﻿namespace OfertasLaborales.Dominio.Eventos
+{
+    public class EventoEmparejamientoCalculado
+    {
+    }
+}

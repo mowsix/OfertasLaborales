@@ -1,1 +1,6 @@
-// Se envió exitosamente una notificación.
+﻿namespace OfertasLaborales.Dominio.Eventos
+{
+    public class EventoNotificacionEmparejamientoEnviada
+    {
+    }
+}

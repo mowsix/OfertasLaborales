@@ -1,1 +1,6 @@
-// Falló el envío de una notificación.
+﻿namespace OfertasLaborales.Dominio.Eventos
+{
+    public class EventoNotificacionEmparejamientoFallida
+    {
+    }
+}

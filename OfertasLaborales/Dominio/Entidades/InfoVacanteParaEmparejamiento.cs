@@ -1,1 +1,6 @@
-// (Opcional) Encapsula datos de vacante necesarios para emparejar.
+﻿namespace OfertasLaborales.Dominio.Entidades
+{
+    public class InfoVacanteParaEmparejamiento
+    {
+    }
+}

@@ -1,1 +1,0 @@
-// Consulta el estado de las notificaciones enviadas.
